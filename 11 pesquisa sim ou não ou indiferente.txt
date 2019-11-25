@@ -1,0 +1,107 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	Console.Clear(); 
+			string alt="";
+		    int fim=0;
+		
+			double idade=0;
+			 
+			double total=0;
+			double cha23s=0;
+			double cha23n=0;
+			double cha23i=0;
+		
+			double chb23s=0;
+			double chb23n=0;
+			double chb23i=0;
+			
+			double cma23s=0;
+			double cma23n=0;
+			double cma23i=0;
+		
+			double cmb23s=0;
+			double cmb23n=0;
+			double cmb23i=0;
+		
+			do
+			{
+				Console.WriteLine("Iniciar pesquisa");
+				Console.WriteLine("se você é homem digite 'h' e se for mulher digite 'm'");
+				alt = Console.ReadLine();
+
+				if(alt=="h")
+				{Console.WriteLine("Por favor, digite sua idade");
+				  idade = Convert.ToInt32(Console.ReadLine());
+				 		if(idade<=23)
+						{
+							Console.WriteLine("Por favor, digite: 's' para SIM, 'n' para NÃO e 'i' para indiferente");
+							alt = Console.ReadLine();
+							if(alt=="s"){chb23s++;}
+							else if(alt=="n"){chb23n++;}
+							else{chb23i++;}
+						}
+				 		else
+						{
+							Console.WriteLine("Por favor, digite: 's' para SIM, 'n' para NÃO e 'i' para indiferente");
+							alt = Console.ReadLine();
+							if(alt=="s"){cha23s++;}
+							else if(alt=="n"){cha23n++;}
+							else{cha23i++;}	
+						}
+
+				}
+				else if(alt=="m")
+				{Console.WriteLine("Por favor, digite sua idade");
+				  idade = Convert.ToInt32(Console.ReadLine());
+				 		if(idade<=23)
+						{
+							Console.WriteLine("Por favor, digite: 's' para SIM, 'n' para NÃO e 'i' para indiferente");
+							alt = Console.ReadLine();
+							if(alt=="s"){cmb23s++;}
+							else if(alt=="n"){cmb23n++;}
+							else{cmb23i++;}
+						}
+				  		else
+						{
+							Console.WriteLine("Por favor, digite: 's' para SIM, 'n' para NÃO e 'i' para indiferente");
+							alt = Console.ReadLine();
+							if(alt=="s"){cma23s++;}
+							else if(alt=="n"){cma23n++;}
+							else{cma23i++;}	
+						}
+
+				}
+		
+			Console.WriteLine("Se deseja encerrar a pesquisa digite: 10; caso contrário digite qualquer número");
+			fim = Convert.ToInt32(Console.ReadLine());
+			}
+		while(fim!=10);
+			total=(cha23s+cha23n+cha23i)+(chb23s+chb23n+chb23i)+(cma23s+cma23n+cma23i)+(cha23s+cha23n+cha23i);
+		Console.WriteLine("total= "+total);
+			double totals=cha23s+chb23s+cma23s+cmb23s;
+		Console.WriteLine("totals= "+totals);
+			double totaln=cha23n+chb23n+cma23s+cmb23n;
+		Console.WriteLine("totaln= "+totaln);
+			double totali=cha23i+chb23i+cma23s+cmb23i;
+		Console.WriteLine("totali= "+totali);
+			double pn=totaln*100/total;
+		Console.WriteLine("pn= "+pn);
+			double ps=totals*100/total;
+		Console.WriteLine("ps= "+ps);
+			double ms=cma23s+cmb23s;
+		Console.WriteLine("ms= "+ms);
+			double hn=cha23n+chb23n;
+		Console.WriteLine("hn= "+hn);
+			double hb23s=chb23s;
+		Console.WriteLine("hb23s= "+hb23s);
+			double mb23n=cmb23n;
+		Console.WriteLine("mb23n= "+mb23n);
+			
+			
+			
+	}
+}

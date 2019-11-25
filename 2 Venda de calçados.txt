@@ -1,0 +1,44 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		const int numeroQtd = 7;
+		int[] numeros = new int[numeroQtd];
+		int nmaior=0;
+		int nmenor=0;
+		int pos_menor=0;
+		int pos_maior=0;
+			
+		for( int count = 0; count < numeroQtd; count++)
+		{
+			Console.WriteLine("Porfavor, digite o número de pares vendidos no dia  "+(count+1));
+			numeros[count] = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("foram vendidos "+numeros[count]+" no dia  " +(count+1)); 	
+				
+			if(count==0)
+				{
+				nmenor = numeros[0];
+        		nmaior = numeros[0];
+				}
+			if(numeros[count] < nmenor )
+				{
+					nmenor = numeros[count];
+					pos_menor = count;
+				}
+			else if( numeros[count] > nmaior )
+				{
+					nmaior = numeros[count];
+					pos_maior = count;
+  				}
+
+		}	
+		
+		Console.WriteLine( "O menor número de vendas de pares foi: " + nmenor);
+		Console.WriteLine( "O dia de menor número de vendas foi o dia: " + (pos_menor+1));
+		Console.WriteLine( "O maior número de vendas foi: " + nmaior);
+		Console.WriteLine( "O dia de maior número vendas foi o dia: " + (pos_maior+1));
+
+	}
+}

@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	
+			
+			double i=37;
+			double j=38;
+			double z=1;
+			double div=0;
+			
+			Console.WriteLine("Calculo da série: 37x38/1+36x37/2+35x36/3+ . . . +1x2/37");
+			
+			do 
+			{
+				
+				Console.WriteLine("i: "+i);
+		        Console.WriteLine("j: "+j);
+				Console.WriteLine("z: "+z);
+					div=div+(i*j/z);
+					i--;
+					j--;
+					z++;
+				Console.WriteLine("div: "+div);
+			}
+			while (z<=37);
+		Console.WriteLine("A soma da série será:  "+div);
+		
+	}
+}

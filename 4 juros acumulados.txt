@@ -1,0 +1,37 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	double valor=0;
+		    double juros=1.035;
+			double jurosexp1=1;
+			double jurosexp2=1;
+			double total=0;
+			double totalj=0;
+		    int n=0;
+			int i;	
+		
+            Console.Write("Informe o valor aplicado :  ");
+            valor = double.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o número de meses :  ");
+		    n = Convert.ToInt32(Console.ReadLine());
+		    
+			for(i=0;i<n;i++)
+				{
+					jurosexp1=jurosexp1*juros;
+					jurosexp2=jurosexp2*(juros-1);
+					
+				
+					Console.WriteLine("O valor total em  "+(i+1)+" meses foi:");
+					Console.WriteLine(total=valor*jurosexp1);
+		
+					Console.WriteLine("O valor total de juros em  "+(i+1)+" meses foi:");
+					Console.WriteLine(totalj=valor*jurosexp1-valor);
+				}
+			
+			
+            
+	}
+}

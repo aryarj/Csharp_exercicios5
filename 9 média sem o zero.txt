@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	
+			
+			Random randNum = new Random();
+			int i = randNum.Next();
+			int x=0;
+			int quantnum=0;
+			double total=0;
+			double count=0;
+		
+		
+		    Console.WriteLine("Digite a quantidade de números a serem geradas");
+			quantnum=Convert.ToInt32(Console.ReadLine());
+			do
+            {
+				i = randNum.Next(0,40);
+				x++;
+				if (i == 0)
+					{
+					x=quantnum;
+					Console.WriteLine(i);
+					}
+				else		
+				{
+					Console.WriteLine(i);
+					count++;
+					total=total+i;
+				}
+			}
+            while (x!=quantnum);
+		    Console.WriteLine("A soma total foi de: "+total);
+			Console.WriteLine("A quantidade total de numeros gerada antes de aparecer o número '0'foi de: "+count);
+			Console.WriteLine("A média foi de: "+(total/count));
+		
+	}
+}

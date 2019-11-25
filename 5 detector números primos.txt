@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	int num, x;
+		    int soma=0;
+            Console.Write("Informe o número :  ");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Os fatores são : ");
+            for (x = 1; x <= num; x++)
+            {
+                if (num % x == 0)
+                   {
+                   Console.WriteLine(x) ;
+					soma=soma+x;
+			       }
+			}
+		     if(soma==num+1)
+				   {
+						Console.WriteLine(num+" é um número primo");
+				   }
+			    else 
+				   {
+						Console.WriteLine(num+" NÃO é um número primo");
+				   }
+			
+            
+	}
+}

@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	Random randNum = new Random();
+			int i = randNum.Next();
+			int x=0;
+			int countpar=0;
+			int countimpar=0;
+		
+		
+			for (x = 1; x <= 300; x++)
+            {
+				i = randNum.Next(0,100);
+                if (i % 2 == 0)
+                    {
+					Console.WriteLine("O número   "+i+"  é par");
+					countpar++;
+					}
+				else if(i%2!=0)		
+				{
+					Console.WriteLine("O número   "+i+"  é impar");
+					countimpar++;
+						}
+			}
+            Console.WriteLine("Há  "+countpar+"  números pares");
+			Console.WriteLine("Há  "+countimpar+"  números impares");
+	}
+}

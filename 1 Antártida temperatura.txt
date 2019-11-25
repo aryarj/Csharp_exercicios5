@@ -1,0 +1,42 @@
+{
+		double t=0;
+		double tp=0;
+		double tn=0;
+		double tm=0;
+		double tmp=0;
+		double tmn=0;
+		int count=0;
+		int countpos=0;
+		int countneg=0;
+						
+		do
+		{
+			count=count+1;
+			Console.WriteLine("Porfavor, digite a temperatura  "+count);
+			t = double.Parse(Console.ReadLine());
+			   	if(t>0){
+					countpos=countpos+1;
+					tp=tp+t;
+						}
+				else if(t<=0){
+					countneg=countneg+1;
+					tn=tn+t;
+					}
+				
+		}	
+		while(count<30);
+		
+		Console.WriteLine("A temperatura média nesses "+count+" dias foi de:");
+		Console.WriteLine(tm = (tp+tn)/count);
+		Console.WriteLine("graus");
+		Console.WriteLine("A temperatura esteve abaixo de zero ou igual a zero em "+countneg+" dias");
+		Console.WriteLine("A temperatura média nos dias abaixo ou igual a zero foi de:");
+		Console.WriteLine(tmn=tn/countneg);
+		Console.WriteLine("graus");
+		Console.WriteLine("A temperatura esteve acima de zero em "+countpos+"dias");
+		Console.WriteLine("A temperatura média nos dias acima de zero foi de:");
+		Console.WriteLine(tmp=tp/countpos);
+		Console.WriteLine("graus");
+		
+	}
+}

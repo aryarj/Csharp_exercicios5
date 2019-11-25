@@ -1,0 +1,39 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 	
+			int li=0;
+			int ls=0;
+			
+			int somapar=0;
+			int somaimpar=0;
+			
+			Console.WriteLine("Porfavor, digite o número do limite inferior");
+			li= Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Porfavor, digite o número do limite superior");
+			ls= Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("O intervalo considerado foi de ["+li+","+ls+"]");
+			while (li<=ls)
+			{
+				if (li%2==0)
+				{
+					somapar=somapar+li;
+					Console.WriteLine(li);
+					li++;
+				}
+			
+				else 
+				{
+					somaimpar=somaimpar+li;
+					Console.WriteLine(li);
+					li++;
+				}
+			}
+		
+		Console.WriteLine("A soma dos numeros pares do intervalo foi de  "+somapar);
+		Console.WriteLine("A soma dos numeros impares do intervalo foi de  "+somaimpar);
+	}
+}
